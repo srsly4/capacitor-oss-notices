@@ -19,5 +19,6 @@ public class CapacitorOSSNoticesPlugin extends Plugin {
     public void showNotices(PluginCall call) {
         Intent intent = new Intent(this.getContext(), OssLicensesMenuActivity.class);
         this.getContext().startActivity(intent);
+        call.resolve();
     }
 }

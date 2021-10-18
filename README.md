@@ -1,3 +1,4 @@
+[![Node version](https://img.shields.io/node/v/capacitor-oss-notices.svg?style=flat)](https://www.npmjs.com/package/capacitor-oss-notices)
 # capacitor-oss-notices
 
 Provides native bridge for displaying Open Source licenses from Gradle and Pod dependencies
@@ -20,7 +21,7 @@ And at the end of the app's build.gradle:
 apply plugin: 'com.google.android.gms.oss-licenses-plugin'
 ```
 
-$$ iOS setup
+## iOS setup
 Add at the end of your Podfile a post install hook:
 ```
 post_install do |installer|

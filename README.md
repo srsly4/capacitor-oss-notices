@@ -34,10 +34,10 @@ apply plugin: 'com.google.android.gms.oss-licenses-plugin'
 ### showNotices()
 
 ```typescript
-showNotices() => Promise<void>
+showNotices() => any
 ```
 
-**Returns:** <code>Promise<any></code>
+**Returns:** <code>any</code>
 
 --------------------
 

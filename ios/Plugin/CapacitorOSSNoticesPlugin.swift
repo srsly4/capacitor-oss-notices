@@ -1,18 +1,18 @@
 import Foundation
 import Capacitor
+import Carte
+import simd
 
-/**
- * Please read the Capacitor iOS Plugin Development Guide
- * here: https://capacitorjs.com/docs/plugins/ios
- */
+
 @objc(CapacitorOSSNoticesPlugin)
 public class CapacitorOSSNoticesPlugin: CAPPlugin {
-    private let implementation = CapacitorOSSNotices()
 
-    @objc func echo(_ call: CAPPluginCall) {
-        let value = call.getString("value") ?? ""
-        call.resolve([
-            "value": implementation.echo(value)
-        ])
+    @objc func showNotices(_ call: CAPPluginCall) {
+        DispatchQueue.main.async {
+            let carteViewController = CarteViewController()
+            let navController = UINavigationController(rootViewController: carteViewController)
+            self.bridge?.viewController?.present(navController, animated: true, completion: nil)
+        }
+        call.resolve()
     }
 }

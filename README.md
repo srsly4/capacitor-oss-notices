@@ -20,6 +20,15 @@ And at the end of the app's build.gradle:
 apply plugin: 'com.google.android.gms.oss-licenses-plugin'
 ```
 
+$$ iOS setup
+Add at the end of your Podfile a post install hook:
+```
+post_install do |installer|
+  pods_dir = File.dirname(installer.pods_project.path)
+  at_exit { `ruby #{pods_dir}/Carte/Sources/Carte/carte.rb configure` }
+end
+```
+
 ## API
 
 <docgen-index>

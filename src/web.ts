@@ -5,8 +5,8 @@ import type { CapacitorOSSNoticesPlugin } from './definitions';
 export class CapacitorOSSNoticesWeb
   extends WebPlugin
   implements CapacitorOSSNoticesPlugin {
-  async echo(options: { value: string }): Promise<{ value: string }> {
-    console.log('ECHO', options);
-    return options;
+
+  showNotices(): Promise<void> {
+    throw new Error('Not supported platform: web');
   }
 }

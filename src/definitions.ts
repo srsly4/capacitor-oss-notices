@@ -1,3 +1,3 @@
 export interface CapacitorOSSNoticesPlugin {
-  echo(options: { value: string }): Promise<{ value: string }>;
+  showNotices(): Promise<void>;
 }
